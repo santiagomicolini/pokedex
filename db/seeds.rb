@@ -16,7 +16,9 @@ pokemon_json = JSON.parse(pokemon_api)
 # I'm iterating over the results hash, but this hash is inside of the pokemon_json
 # hash so, I take that key form the hash.
 pokemon_json["results"].each do |result|
-  pokemon_name = result["name"]
-  pokemon_data = result["url"]
-  info = URI.open(pokemon_data).read
+  pokemon = Pokemon.new(
+    pokemon_name: result["name"],
+    info: URI.open(result["url"]).read
+  )
+  user.save!
 end
