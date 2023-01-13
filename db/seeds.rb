@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "open-uri"
+require "json"
+
+url = "https://pokeapi.co/api/v2/pokemon/"
+pokemon_api = URI.open(url).read
+
+pokemon_json = JSON.parse(pokemon_api)
+# I'm iterating over the results hash, but this hash is inside of the pokemon_json
+# hash so, I take that key form the hash.
+pokemon_json["results"].each do |result|
+  pokemon_name = result["name"]
+  pokemon_data = result["url"]
+  info = URI.open(pokemon_data).read
+end
