@@ -17,8 +17,15 @@ pokemon_json = JSON.parse(pokemon_api)
 # hash so, I take that key form the hash.
 pokemon_json["results"].each do |result|
   pokemon = Pokemon.new(
-    pokemon_name: result["name"],
-    info: URI.open(result["url"]).read
+    name: result["name"],
+    types: JSON.parse(URI.open(result["url"]).read)["types"].each do |type|
+      type["type"]["name"]
+    end,
+    ability: JSON.parse(URI.open(result["url"]).read)["abilities"].each do |ability|
+      ability["ability"]["name"]
+    end,
+    weight: JSON.parse(URI.open.call(result["url"]).read)["weight"].to_s
   )
-  user.save!
+  pokemon.save!
+  puts "#{pokemon.name} created!"
 end
