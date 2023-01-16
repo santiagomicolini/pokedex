@@ -62,4 +62,7 @@ pokemons_json["results"].each do |pokemon|
   end
 
   pkmn.descriptions = type_arr
+
+  pkmn.save!
+  puts "#{pkmn.name} saved!"
 end
