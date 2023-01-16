@@ -1,2 +1,35 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.title {
+  font-family: 'Pokemon Solid', sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100vw;
+}
+
+.pkmn {
+}
+
+.pkmn-name {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.cards {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.pokemon-image {
+  max-width: 200px;
+}

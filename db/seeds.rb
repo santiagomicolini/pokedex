@@ -11,26 +11,39 @@ require "json"
 
 Pokemon.destroy_all
 
+# save the url in to a variable
 url = "https://pokeapi.co/api/v2/pokemon/?limit=151"
+
+# URI.open, open a conection with the url that we just saved and read the content
+# returns this content as a string
 pokemon_api = URI.open(url).read
+# With JSON.parse, take the string that we just get as an argument
+# and convert the string into a hash
 pokemons_json = JSON.parse(pokemon_api)
 
-# I'm iterating over the results hash, but this hash is inside of the pokemon_json
-# hash so, I take that key form the hash.
+# I take that hash and I grab the results array inside of it
+# After that I iterate over this array to get info of every pokemon
 pokemons_json["results"].each do |pokemon|
+  # I'll create new pokemons that will have a name, ability, weight, image, evolutions and description attributes
   # pokemon name
   pkmn = Pokemon.new(name: pokemon["name"])
 
+  # i create a new variable to store all the info of every particular pokemon
   pokemon_info = JSON.parse(URI.open(pokemon["url"]).read)
 
   # ability
 
   ability_arr = []
 
+  # From the pokemon_info hash I take the abilities array and I iterete over to
+  # get evey ability of each pokemon. I store that data in the array ability_arr
+  # pushing the data in each iteration.
+
   pokemon_info["abilities"].each do |ability|
     ability_arr << ability["ability"]["name"]
   end
 
+  #
   pkmn.abilities = ability_arr
 
   # weight

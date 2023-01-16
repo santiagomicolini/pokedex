@@ -1,0 +1,26 @@
+<h1 class="title">POKEDEX</h1>
+
+<span class = "pokemons">
+  <% @pokemons.each do |pokemon| %>
+  <span class = "cards">
+
+    <span class = "pkmn-name">
+      <%= pokemon.name %>
+    </span>
+
+    <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
+
+    <%= "Weight" %> <%= pokemon.weight %>
+
+    <% pokemon.descriptions.each do |description| %>
+    <%= "Type:" %> <%= description %>
+    <% end %>
+
+    <% pokemon.abilities.each do |ability|%>
+      <%= "Abilities:"  %>
+      <%= ability %>
+    <% end %>
+
+  </span>
+  <% end %>
+</span>
