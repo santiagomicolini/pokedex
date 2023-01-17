@@ -1,26 +1,36 @@
-<h1 class="title">POKEDEX</h1>
+<h1 class="title logo">POKEDEX</h1>
 
 <span class = "pokemons">
   <% @pokemons.each do |pokemon| %>
   <span class = "cards">
 
     <span class = "pkmn-name">
-      <%= pokemon.name %>
+      <%= pokemon.name.capitalize %>
     </span>
 
-    <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
+    <span class="image-container">
+      <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
+    </span>
 
-    <%= "Weight" %> <%= pokemon.weight %>
+    <span class="info">
+      <span class ="weight">
+        <%= "WEIGHT:" %> <%= pokemon.weight %>
+        <%= "lbs" %>
+      </span>
+      <span class= "type">
+        <%= "TYPE:" %>
+        <% pokemon.descriptions.each do |description| %>
+        <%= description.upcase %>
+        <% end %>
+      </span>
 
-    <% pokemon.descriptions.each do |description| %>
-    <%= "Type:" %> <%= description %>
-    <% end %>
-
-    <% pokemon.abilities.each do |ability|%>
-      <%= "Abilities:"  %>
-      <%= ability %>
-    <% end %>
-
+      <span class="abilities">
+        <%= "ABILITIES:"  %>
+        <% pokemon.abilities.each do |ability|%>
+          <%= ability.upcase %>
+        <% end %>
+      </span>
+  </span>
   </span>
   <% end %>
 </span>
