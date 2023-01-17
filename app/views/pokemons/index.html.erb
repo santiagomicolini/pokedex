@@ -1,36 +1,43 @@
-<h1 class="title logo">POKEDEX</h1>
 
-<span class = "pokemons">
-  <% @pokemons.each do |pokemon| %>
-  <span class = "cards">
+  <h1 class="title">POKEDEX</h1>
 
-    <span class = "pkmn-name">
-      <%= pokemon.name.capitalize %>
+  <span class = "pokemons">
+    <% @pokemons.each do |pokemon| %>
+    <span class = "cards">
+
+      <span class = "pkmn-name">
+        <%= pokemon.name.capitalize %>
+      </span>
+
+      <span class="image-container">
+        <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
+      </span>
+
+      <span class="info">
+        <span class ="weight">
+          <%= "Weight" %>
+          <%= pokemon.weight %>
+          <%= "lbs" %>
+        </span>
+
+        <span class= "type">
+          <span class="type-container">
+            <%= "Type" %>
+          </span>
+          <% pokemon.descriptions.each do |description| %>
+          <%= description.capitalize %>
+          <% end %>
+        </span>
+
+        <span class="abilities">
+          <span class="ability-container">
+            <%= "Ability" %>
+          </span>
+          <% pokemon.abilities.each do |ability|%>
+            <%= ability.capitalize %>
+          <% end %>
+        </span>
     </span>
-
-    <span class="image-container">
-      <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
     </span>
-
-    <span class="info">
-      <span class ="weight">
-        <%= "WEIGHT:" %> <%= pokemon.weight %>
-        <%= "lbs" %>
-      </span>
-      <span class= "type">
-        <%= "TYPE:" %>
-        <% pokemon.descriptions.each do |description| %>
-        <%= description.upcase %>
-        <% end %>
-      </span>
-
-      <span class="abilities">
-        <%= "ABILITIES:"  %>
-        <% pokemon.abilities.each do |ability|%>
-          <%= ability.upcase %>
-        <% end %>
-      </span>
+    <% end %>
   </span>
-  </span>
-  <% end %>
-</span>
