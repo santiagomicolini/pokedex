@@ -23,9 +23,9 @@
 
 .pkmn-name {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Cabin', sans-serif;
-  font-style: bold;
+  font-style: italic;
   font-size: 30px;
-  padding-top: 20px;
+  margin: 12px 0 12px 0;
 }
 
 .cards {
@@ -65,7 +65,7 @@
 
 .weight {
   border-bottom: 1px solid black;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -97,4 +97,52 @@
   font-style: italic;
   color: rgb(207, 207, 207);
   margin-right: 12px;
+}
+
+
+.pokebola {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.pokebola::before {
+  content: '';
+  width: 10rem;
+  height: 5rem;
+  background-color: red;
+  border-radius: 5rem 5rem 0 0;
+  position: absolute;
+  margin-left: -80px;
+}
+
+.detalle {
+  width: 10rem;
+  height: 0.5rem;
+  background-color: black;
+  margin-top: -5.2rem;
+  position:absolute;
+}
+
+.detalle::before {
+  content:'';
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -1.2rem;
+  margin-left: -1.45rem;
+}
+
+.detalle::after {
+  content: '';
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -0.6rem;
+  margin-left: -0.8rem;
+  position: absolute;
 }
