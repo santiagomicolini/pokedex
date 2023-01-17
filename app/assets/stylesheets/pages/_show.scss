@@ -1,0 +1,24 @@
+
+.show-page-container {
+  display: flex;
+  border: 10px solid rgb(255,215,0);
+  background-color: red;
+  margin: 30px 20px 0 20px;
+  padding: 50px;
+  max-width: 1000px;
+  min-height: 500px;
+}
+
+.show-title {
+  border: 10px solid rgb(255,215,0);
+  color: white;
+  padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Cabin', sans-serif;
+  font-style: italic;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3c54c95-8c44-4e5b-93ae-389fe559bcbf/dbxskoi-8049e489-5014-4b87-bdd5-204d8c88c55a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IzYzU0Yzk1LThjNDQtNGU1Yi05M2FlLTM4OWZlNTU5YmNiZlwvZGJ4c2tvaS04MDQ5ZTQ4OS01MDE0LTRiODctYmRkNS0yMDRkOGM4OGM1NWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UMuZTwIXFaCY-wW1eAjt85sQDuA_7kvH762mctzWne0');
+}
+
+.show-info {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Cabin', sans-serif;
+  font-size: 24px;
+}

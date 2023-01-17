@@ -1,0 +1,22 @@
+<div class="show-page-container">
+<div class="show-title">
+  <h1><%=  @pokemon.name.capitalize %></h1>
+  <img src="<%= @pokemon.image %>" alt="<%= @pokemon.name %>" class="pokemon-image">
+</div>
+
+<div class="show-info">
+  <p> <%= @pokemon.weight %></p>
+
+  <% @pokemon.descriptions.each do |description| %>
+      <%= description.capitalize %>
+  <% end %>
+
+  <% @pokemon.abilities.each do |ability|%>
+      <%= ability.capitalize %>
+  <% end %>
+
+  <% @pokemon.evolutions.each do |evolution| %>
+    <%= evolution.capitalize %>
+  <% end %>
+</div>
+</div>
