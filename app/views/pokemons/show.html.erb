@@ -19,7 +19,7 @@
     <span id="italic">
     <%= "Weight" %>
     </span>
-    <%= @pokemon.weight %> <%= "Lb" %>
+    <%= @pokemon.weight %> <%= "Lbs" %>
   </div>
   <div>
     <span id="italic">
@@ -41,7 +41,8 @@
     <span id="italic">
     <%= "Evolutions" %>
     </span>
-    <% @pokemon.evolutions.each do |evolution| %>
+
+      <% @pokemon.evolutions.each do |evolution| %>
       <%= evolution.capitalize %>
     <% end %>
   </div>

@@ -1,19 +1,21 @@
 <span class="page">
 <h1 class="title">POKEDEX</h1>
 
+<div class ="search">
 <%= form_with url: pokemons_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
+  <%= text_field_tag :search,
+    params[:search],
     class: "form-control",
-    placeholder: "Find a pokemon"
+    placeholder: "Find a pokemon (by name or group by type or abilities)"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+</div>
 
-  <span class = "pokemons">
-    <% @pokemons.each do |pokemon| %>
-    <%= link_to pokemon_path(pokemon) do %>
-    <span class = "cards">
+<span class = "pokemons">
+  <% @pokemons.each do |pokemon| %>
+  <%= link_to pokemon_path(pokemon) do %>
+  <span class = "cards">
 
       <span class = "pkmn-name">
         <%= pokemon.name.capitalize %>
@@ -28,16 +30,16 @@
           <%= "Weight" %>
           <%= pokemon.weight %>
           <%= "lbs" %>
-        </span>
+      </span>
 
-        <span class= "type">
-          <span class="type-container">
-            <%= "Type" %>
-          </span>
-          <% pokemon.descriptions.each do |description| %>
-          <%= description.capitalize %>
-          <% end %>
+      <span class= "type">
+        <span class="type-container">
+           <%= "Type" %>
         </span>
+        <% pokemon.descriptions.each do |description| %>
+          <%= description.capitalize %>
+        <% end %>
+      </span>
 
         <span class="abilities">
           <span class="ability-container">
@@ -47,9 +49,10 @@
             <%= ability.capitalize %>
           <% end %>
         </span>
+
     </span>
     </span>
-      <% end %>
+    <% end %>
     <% end %>
   </span>
 </span>
