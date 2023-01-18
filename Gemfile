@@ -31,6 +31,10 @@ gem "jbuilder"
 
 gem 'poke-api-v2'
 
+# Pg Search
+
+gem "pg_search"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

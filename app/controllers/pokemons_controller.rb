@@ -1,9 +1,14 @@
 class PokemonsController < ApplicationController
-
   before_action :set_pokemon, only: [:show]
 
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.destroy_all
+
+    if params[:query]
+      @pokemons = Pokemon.search_pokemons(params[:query])
+    else
+      @pokemons = Pokemon.all
+    end
   end
 
   def show
