@@ -1,22 +1,50 @@
-
+.page {
+  background-color: rgb(90, 0, 0);
+  margin: 0;
+  height: 100vh;
+  align-content: center;
+}
 .show-page-container {
   display: flex;
   border: 10px solid rgb(255,215,0);
-  background-color: red;
-  margin: 50px auto;
-  padding: 50px;
-  max-width: 1000px;
-  min-height: 500px;
- justify-items: center;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f144fa15-4001-4f05-83d9-73ad837f6bc4/d4wcj31-53a8338d-c2b1-4a00-ad15-aaa314cb9f6b.png');
+  margin: 0 auto;
+  padding: 50px 10px 50px 10px;
+  max-height: 782px;
+  max-width: 582px;
+  font-size: 24px;
+ flex-direction: column;
+ align-items: center;
 }
 
-.show-title {
-  border: 10px solid rgb(255,215,0);
+.title-font {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.description {
+  border: 6px solid rgb(255,215,0);
+  color: #cfcfcf;
+  background-color: black;
+  padding: 10px;
+
+}
+
+.show-img {
+  border: 6px solid rgb(255,215,0);
   color: white;
   padding: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Cabin', sans-serif;
   font-style: italic;
+  max-height: 300px;
+  margin-top: 48px;
   background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3c54c95-8c44-4e5b-93ae-389fe559bcbf/dbxskoi-8049e489-5014-4b87-bdd5-204d8c88c55a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IzYzU0Yzk1LThjNDQtNGU1Yi05M2FlLTM4OWZlNTU5YmNiZlwvZGJ4c2tvaS04MDQ5ZTQ4OS01MDE0LTRiODctYmRkNS0yMDRkOGM4OGM1NWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UMuZTwIXFaCY-wW1eAjt85sQDuA_7kvH762mctzWne0');
+}
+
+.show-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Cabin', sans-serif;
+  font-size: 24px;
 }
 
 .show-info {
@@ -30,7 +58,7 @@
 
 #italic {
   font-style: italic;
-  font-size: 36px;
-  border: 5px solid rgb(255,215,0);
+  font-size: 24px;
+  border: 5px solid #cfcfcf;
   margin: 5px;
 }

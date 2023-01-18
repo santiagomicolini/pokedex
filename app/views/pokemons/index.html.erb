@@ -2,8 +2,8 @@
 
   <span class = "pokemons">
     <% @pokemons.each do |pokemon| %>
+    <%= link_to pokemon_path(pokemon) do %>
     <span class = "cards">
-    <%= link_to "See details", pokemon_path(pokemon) %>
 
       <span class = "pkmn-name">
         <%= pokemon.name.capitalize %>
@@ -39,5 +39,6 @@
         </span>
     </span>
     </span>
+      <% end %>
     <% end %>
   </span>

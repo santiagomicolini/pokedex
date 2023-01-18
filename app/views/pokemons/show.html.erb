@@ -1,12 +1,18 @@
+<div class="page">
 <div class="show-page-container">
-<div class="show-title">
-  <h1><%=  @pokemon.name.capitalize %></h1>
+  <span class="title-font">
+    <%= @pokemon.name.capitalize %>
+  </span>
+  <span class="description">
+    <%= @pokemon.flavours %>
+  </span>
+<div class="show-img">
   <img src="<%= @pokemon.image %>" alt="<%= @pokemon.name %>" class="pokemon-image">
 </div>
 
 <div class="show-info">
-   <div>
-    <%= @pokemon.flavours %>
+   <div class="show-title">
+
   </div>
   <div>
     <span id="italic">
@@ -38,5 +44,6 @@
       <%= evolution.capitalize %>
     <% end %>
   </div>
+</div>
 </div>
 </div>
