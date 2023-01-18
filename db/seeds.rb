@@ -68,7 +68,11 @@ pokemons_json["results"].each do |pokemon|
 
   pkmn.evolutions = ev_arr
 
-  # descriptions
+  # flavour
+
+  pkmn.flavours = species["flavor_text_entries"][0]["flavor_text"]
+
+  # type
   type_arr = []
   pokemon_info["types"].each do |type_hash|
     type_arr << type_hash["type"]["name"]

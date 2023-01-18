@@ -5,18 +5,38 @@
 </div>
 
 <div class="show-info">
-  <p> <%= @pokemon.weight %></p>
-
-  <% @pokemon.descriptions.each do |description| %>
+   <div>
+    <%= @pokemon.flavours %>
+  </div>
+  <div>
+    <span id="italic">
+    <%= "Weight" %>
+    </span>
+    <%= @pokemon.weight %> <%= "Lb" %>
+  </div>
+  <div>
+    <span id="italic">
+    <%= "Type" %>
+    </span>
+    <% @pokemon.descriptions.each do |description| %>
       <%= description.capitalize %>
-  <% end %>
-
-  <% @pokemon.abilities.each do |ability|%>
-      <%= ability.capitalize %>
-  <% end %>
-
-  <% @pokemon.evolutions.each do |evolution| %>
-    <%= evolution.capitalize %>
-  <% end %>
+    <% end %>
+  </div>
+  <div>
+    <span id="italic">
+    <%= "Abilities" %>
+    </span>
+    <% @pokemon.abilities.each do |ability|%>
+        <%= ability.capitalize %>
+    <% end %>
+  </div>
+  <div>
+    <span id="italic">
+    <%= "Evolutions" %>
+    </span>
+    <% @pokemon.evolutions.each do |evolution| %>
+      <%= evolution.capitalize %>
+    <% end %>
+  </div>
 </div>
 </div>
