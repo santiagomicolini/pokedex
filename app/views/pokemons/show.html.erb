@@ -1,5 +1,10 @@
+
+
 <div class="page">
-<h1 class="title">POKEDEX</h1>
+  <span class="back">
+  <%=link_to "Back to all pokemons", pokemons_path()%>
+  <h1 class="title-2">POKEDEX</h1>
+  </span>
 <div class="show-page-container">
   <span class="title-font">
     <%= @pokemon.name.capitalize %>

@@ -79,3 +79,22 @@
   color:#cfcfcf;
   margin: 5px;
 }
+
+.back {
+  display: flex;
+  align-items: flex-start;
+  justify-items: flex-start;
+  padding: 8px;
+    a{
+      text-decoration: none;
+      color:black;
+    }
+}
+
+.title-2 {
+  font-family: 'Pokemon Solid', sans-serif;
+  padding: 24px;
+  margin: 0 450px;
+  color: black;
+  font-size: 48px;
+}
