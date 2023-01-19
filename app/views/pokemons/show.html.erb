@@ -41,10 +41,11 @@
     <span id="italic">
     <%= "Evolutions" %>
     </span>
-
-      <% @pokemon.evolutions.each do |evolution| %>
-      <%= evolution.capitalize %>
-    <% end %>
+      <span class="evolutions">
+        <% @pokemon.evolutions.each do |evolution| %>
+        <%=link_to evolution.capitalize, pokemon_path(Pokemon.find_by(name: evolution)) unless evolution == @pokemon.name%>
+        <% end %>
+      </span>
   </div>
 </div>
 </div>
