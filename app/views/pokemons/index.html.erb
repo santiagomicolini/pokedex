@@ -1,7 +1,10 @@
+
+
 <span class="page">
 <h1 class="title">POKEDEX</h1>
 
 <div class ="search">
+<%# I add the form that is used for the searh bar %>
 <%= form_with url: pokemons_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :search,
     params[:search],
@@ -12,47 +15,48 @@
 <% end %>
 </div>
 
+<%# I iterate over each pokemon to get the name, image, etc. %>
 <span class = "pokemons">
   <% @pokemons.each do |pokemon| %>
   <%= link_to pokemon_path(pokemon) do %>
-  <span class = "cards">
+<span class = "cards">
 
-      <span class = "pkmn-name">
-        <%= pokemon.name.capitalize %>
-      </span>
+<span class = "pkmn-name">
+  <%= pokemon.name.capitalize %>
+</span>
 
-      <span class="image-container">
-        <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
-      </span>
+<span class="image-container">
+  <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>" class="pokemon-image">
+</span>
 
-      <span class="info">
-        <span class ="weight">
-          <%= "Weight" %>
-          <%= pokemon.weight %>
-          <%= "lbs" %>
-      </span>
+<span class="info">
+  <span class ="weight">
+    <%= "Weight" %>
+    <%= pokemon.weight %>
+    <%= "lbs" %>
+</span>
 
-      <span class= "type">
-        <span class="type-container">
-           <%= "Type" %>
-        </span>
-        <% pokemon.descriptions.each do |description| %>
-          <%= description.capitalize %>
-        <% end %>
-      </span>
-
-        <span class="abilities">
-          <span class="ability-container">
-            <%= "Ability" %>
-          </span>
-          <% pokemon.abilities.each do |ability|%>
-            <%= ability.capitalize %>
-          <% end %>
-        </span>
-
+<span class= "type">
+  <span class="type-container">
+    <%= "Type" %>
     </span>
-    </span>
-    <% end %>
-    <% end %>
-  </span>
+      <% pokemon.descriptions.each do |description| %>
+      <%= description.capitalize %>
+      <% end %>
+</span>
+
+<span class="abilities">
+<span class="ability-container">
+  <%= "Ability" %>
+</span>
+  <% pokemon.abilities.each do |ability|%>
+  <%= ability.capitalize %>
+  <% end %>
+</span>
+
+</span>
+</span>
+<% end %>
+  <% end %>
+</span>
 </span>
