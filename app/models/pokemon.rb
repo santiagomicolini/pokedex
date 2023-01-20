@@ -1,4 +1,5 @@
 class Pokemon < ApplicationRecord
+  validates :name, :abilities, :weight, :descriptions, :evolutions, :image, :flavours, presence: true
 
   serialize :abilities
   serialize :evolutions
